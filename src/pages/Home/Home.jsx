@@ -1,12 +1,19 @@
-import React from 'react'
-import { Container } from  './styles';
+import React from 'react';
+import { Navigation } from '../../components';
+
+import { Container } from './styles';
 
 const Home = () => {
-    return (
-        <Container>
-            ooi
-        </Container>
-    )
-}
+  return (
+    <Container>
+      <Navigation />
+
+
+      
+    </Container>
+
+
+  );
+};
 
 export default Home;
