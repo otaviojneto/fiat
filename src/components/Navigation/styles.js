@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import theme from '../../styles/theme';
+
 
 export const Container = styled.div`
   background-color: yellow;
@@ -9,10 +11,10 @@ display: flex;
 `;
 
 export const Nav = styled.div`
-background-color: red;
-display: none;
+background-color: black;
 height: 100vh;
-width: 220px;
+transition: ease-in-out 0.4s;
+width: ${props => (props.open ? '220px' : 0)};;
 
 
 
@@ -27,7 +29,7 @@ export const Hamburguer = styled.button`
 
   span {
     content: '';
-    background-color: white;
+    background-color: ${theme.colors.primary};
     border-radius: 12px;
     bottom: 12px;
     height: 2px;
@@ -37,7 +39,7 @@ export const Hamburguer = styled.button`
 
     &::before {
       content: '';
-      background-color: white;
+      background-color: ${theme.colors.primary};
       border-radius: 12px;
       bottom: 8px;
       height: 2px;
@@ -48,7 +50,7 @@ export const Hamburguer = styled.button`
 
     &::after {
       content: '';
-      background-color: white;
+      background-color: ${theme.colors.primary};
       border-radius: 12px;
       bottom: 16px;
       height: 2px;
@@ -59,3 +61,24 @@ export const Hamburguer = styled.button`
   }
 `;
 
+
+
+
+// #openmenu:checked ~ .menu-pane {
+//   left: -5vw;
+//   transform: translateX(-5vw);
+// }
+
+// #openmenu:checked ~ .hamburger-icon span:nth-of-type(2) {
+//   transform: translate(0%, 175%) rotate(-45deg);
+//   background-color: white;
+// }
+
+// #openmenu:checked ~ .hamburger-icon span:nth-of-type(3) {
+//   transform: rotate(45deg);
+//   background-color: white;
+// }
+
+// #openmenu:checked ~ .hamburger-icon span:nth-of-type(1) {
+//   opacity: 0;
+// }
