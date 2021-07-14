@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navigation } from '../../components';
+import { Hero, Navigation } from '../../Sections';
 
 import { Container } from './styles';
 
@@ -8,11 +8,8 @@ const Home = () => {
     <Container>
       <Navigation />
 
-
-      
+      <Hero />
     </Container>
-
-
   );
 };
 

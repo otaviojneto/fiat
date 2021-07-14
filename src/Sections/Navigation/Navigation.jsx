@@ -9,7 +9,7 @@ const Navigation = () => {
       
         <Nav open={open}  />
       
-        <Hamburguer onClick={() => setIsOpen(!open) }>
+        <Hamburguer onClick={() => setIsOpen(!open) } open={open}>
           <span></span>
         </Hamburguer>
       </Menu>
