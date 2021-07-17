@@ -38,7 +38,13 @@ const Hero = () => {
             alt="car"
           />
         </SwiperSlide>
-        <SwiperSlide>2</SwiperSlide>
+        <SwiperSlide>
+          <img
+            src="https://toro.fiat.com.br/static/media/storiesMotor.e4b0c77e.jpg"
+            alt="car"
+          />
+
+        </SwiperSlide>
         <SwiperSlide>3</SwiperSlide>
       </Swiper>
       <Swiper
