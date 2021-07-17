@@ -1,5 +1,5 @@
 import React from 'react';
-import { Hero, Navigation } from '../../Sections';
+import {  Navigation, PaginationSwiper } from '../../Sections';
 
 import { Container } from './styles';
 
@@ -8,7 +8,7 @@ const Home = () => {
     <Container>
       <Navigation />
 
-      <Hero />
+      <PaginationSwiper />
     </Container>
   );
 };

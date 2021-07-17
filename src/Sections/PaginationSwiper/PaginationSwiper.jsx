@@ -4,7 +4,6 @@ import SwiperCore, {
   Navigation,
   Pagination,
   Scrollbar,
-  Thumbs,
   A11y,
 } from 'swiper';
 
@@ -13,23 +12,19 @@ import 'swiper/components/navigation/navigation.min.css';
 import 'swiper/components/pagination/pagination.min.css';
 import 'swiper/components/thumbs/thumbs.min.css';
 
-
 import { Bullet, Container, Swiper } from './styles';
 
-SwiperCore.use([
-  Navigation,
-  Pagination,
-  Scrollbar,
-  Thumbs,
-  A11y,
-]);
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
-const Hero = () => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
-
+const PaginationSwiper = () => {
   return (
     <Container>
-      <Swiper navigation thumbs={{ swiper: thumbsSwiper }}>
+      <Swiper
+        pagination={{
+          clickable: true,
+        }}
+        navigation
+      >
         <SwiperSlide>
           <img
             src="https://toro.fiat.com.br/static/media/storiesIndex.4d0958dc.jpg"
@@ -44,30 +39,8 @@ const Hero = () => {
         </SwiperSlide>
         <SwiperSlide>3</SwiperSlide>
       </Swiper>
-
-      <Bullet>
-        <Swiper
-          onSwiper={setThumbsSwiper}
-          spaceBetween={10}
-          slidesPerView={3}
-          freeMode
-          watchSlidesVisibility
-          watchSlidesProgress
-        >
-          <SwiperSlide><span>
-        aqui vai um texto
-          </span></SwiperSlide>
-
-          <SwiperSlide><span>
-        aqui vai um texto
-          </span></SwiperSlide>
-          <SwiperSlide><span>
-        aqui vai um texto
-          </span></SwiperSlide>
-        </Swiper>
-      </Bullet>
     </Container>
   );
 };
 
-export default Hero;
+export default PaginationSwiper;

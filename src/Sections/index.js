@@ -1,4 +1,6 @@
 import Navigation from './Navigation';
 import Hero from './Hero';
+import PaginationSwiper from './PaginationSwiper';
 
-export { Hero, Navigation };
+
+export { Hero, Navigation, PaginationSwiper };
