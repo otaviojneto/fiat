@@ -13,7 +13,6 @@ import 'swiper/components/navigation/navigation.min.css';
 import 'swiper/components/pagination/pagination.min.css';
 import 'swiper/components/thumbs/thumbs.min.css';
 
-
 import { Bullet, Container, Swiper } from './styles';
 
 SwiperCore.use([
@@ -32,17 +31,23 @@ const Hero = () => {
       <Swiper navigation thumbs={{ swiper: thumbsSwiper }}>
         <SwiperSlide>
           <img
+            src="https://toro.fiat.com.br/static/media/storiesMotor.e4b0c77e.jpg"
+            alt="car"
+          />
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <img
             src="https://toro.fiat.com.br/static/media/storiesIndex.4d0958dc.jpg"
             alt="car"
           />
         </SwiperSlide>
         <SwiperSlide>
           <img
-            src="https://toro.fiat.com.br/static/media/storiesMotor.e4b0c77e.jpg"
+            src="https://super.abril.com.br/wp-content/uploads/2020/09/04-09_gato_SITE.jpg"
             alt="car"
           />
         </SwiperSlide>
-        <SwiperSlide>3</SwiperSlide>
       </Swiper>
 
       <Bullet>
@@ -54,16 +59,25 @@ const Hero = () => {
           watchSlidesVisibility
           watchSlidesProgress
         >
-          <SwiperSlide><span>
-        aqui vai um texto
-          </span></SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://toro.fiat.com.br/static/media/storiesMotor.e4b0c77e.jpg"
+              alt="car"
+            />
+          </SwiperSlide>
 
-          <SwiperSlide><span>
-        aqui vai um texto
-          </span></SwiperSlide>
-          <SwiperSlide><span>
-        aqui vai um texto
-          </span></SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://toro.fiat.com.br/static/media/storiesIndex.4d0958dc.jpg"
+              alt="car"
+            />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img
+              src="https://super.abril.com.br/wp-content/uploads/2020/09/04-09_gato_SITE.jpg"
+              alt="car"
+            />
+          </SwiperSlide>
         </Swiper>
       </Bullet>
     </Container>

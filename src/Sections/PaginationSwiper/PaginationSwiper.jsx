@@ -16,28 +16,45 @@ import { Bullet, Container, Swiper } from './styles';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
+const list = [
+  {
+    id: 1,
+    text: 'Lorem',
+    image:
+      'https://toro.fiat.com.br/static/media/storiesMotor.e4b0c77e.jpg',
+  },
+  {
+    id: 0,
+    text: 'Lorem',
+    image:
+      'https://toro.fiat.com.br/static/media/storiesIndex.4d0958dc.jpg',
+  },
+];
+
 const PaginationSwiper = () => {
   return (
     <Container>
       <Swiper
         pagination={{
           clickable: true,
+          renderBullet: function (index, className) {
+            return `<div class="${className}">
+                <img src="${list[index]?.image}" alt="${list[index]?.text}" />
+                </div>`;
+          },
         }}
+        className="mySwiper"
         navigation
       >
-        <SwiperSlide>
-          <img
-            src="https://toro.fiat.com.br/static/media/storiesIndex.4d0958dc.jpg"
-            alt="car"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://toro.fiat.com.br/static/media/storiesMotor.e4b0c77e.jpg"
-            alt="car"
-          />
-        </SwiperSlide>
-        <SwiperSlide>3</SwiperSlide>
+        {list.map(item => (
+          <SwiperSlide>
+            <img
+              key={item.id}
+              src={item.image}
+              alt={item.text}
+            />
+          </SwiperSlide>
+        ))}
       </Swiper>
     </Container>
   );

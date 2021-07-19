@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 import { Swiper as SwiperReact } from 'swiper/react';
 
-import Images from  '../../mocks/images'
-
+import Images from '../../assets/thumbMotor.jpg';
 
 export const Container = styled.div`
   position: relative;
@@ -20,17 +19,15 @@ export const Swiper = styled(SwiperReact)`
   }
 
   .swiper-pagination {
-    .swiper-pagination-bullet{
-      {Images.map(item => (
-        background-image: url(${item.img});
-        ))}
-      border-radius: 8px;
-      height: 112px;
-      width: 112px;
+    height: auto;
+    .swiper-pagination-bullet {
+      background-color: transparent;
+      height: 200px;
+      width: 200px;
 
-
-      span {
-          
+      img {
+        height: 100%;
+        width: 100%;
       }
     }
   }
@@ -39,6 +36,10 @@ export const Swiper = styled(SwiperReact)`
 export const Bullet = styled.div`
   display: flex;
   justify-content: center;
+  height: 50px;
+  width: 50px;
 
-
+  img {
+    width: 100%;
+  }
 `;
