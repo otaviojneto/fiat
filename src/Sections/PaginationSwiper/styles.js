@@ -27,14 +27,18 @@ export const Swiper = styled(SwiperReact)`
       position: relative;
       width: 112px;
 
-      &::before{
-        background-color: ${theme.colors.primary} ;
+      &::before {
+        background-color: ${theme.colors.primary};
+        border-radius: 0 6px 0 6px;
+        color: ${theme.colors.white};
         content: '+';
+        font-size: 18px;
+        font-weight: 800;
         height: 40px;
         position: absolute;
-        right: 0;
+        right: 4px;
+        top: 4px;
         width: 40px;
-
       }
 
       img {
