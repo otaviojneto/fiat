@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { Swiper as SwiperReact } from 'swiper/react';
 
 import Images from '../../assets/thumbMotor.jpg';
+import theme from '../../styles/theme';
 
 export const Container = styled.div`
   position: relative;
@@ -22,12 +23,31 @@ export const Swiper = styled(SwiperReact)`
     height: auto;
     .swiper-pagination-bullet {
       background-color: transparent;
-      height: 200px;
-      width: 200px;
+      height: 112px;
+      position: relative;
+      width: 112px;
+
+      &::before{
+        background-color: ${theme.colors.primary} ;
+        content: '+';
+        height: 40px;
+        position: absolute;
+        right: 0;
+        width: 40px;
+
+      }
 
       img {
+        border: 1px solid ${theme.colors.primary};
+        border-radius: 4px;
         height: 100%;
         width: 100%;
+      }
+
+      &-active {
+        img {
+          border: 2px solid ${theme.colors.primary};
+        }
       }
     }
   }
