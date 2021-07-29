@@ -14,7 +14,7 @@ import 'swiper/components/thumbs/thumbs.min.css';
 
 import thumbs from '../../mocks/images';
 
-import { Bullet, Container, Swiper } from './styles';
+import { Container, Image, Swiper, Text } from './styles';
 
 SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
@@ -35,11 +35,12 @@ const PaginationSwiper = () => {
       >
         {thumbs.map(item => (
           <SwiperSlide>
-            <img
-              key={item.id}
-              src={item.bg}
-              alt={item.text}
-            />
+            <Image src={item.brand} alt="" />
+            <Text>
+              <h2>{item.title}</h2>
+              <h1>{item.subtitle}</h1>
+            </Text>
+            <img key={item.id} src={item.bg} alt={item.text} />
           </SwiperSlide>
         ))}
       </Swiper>

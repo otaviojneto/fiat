@@ -6,6 +6,9 @@ import img3 from '../assets/thumbInternal.jpg'
 const ImagesMocks = [
     {
         id: 1,
+        brand:'https://toro.fiat.com.br/static/media/flagColorida.25a3c0e2.svg',
+        title:'NOVA',
+        subtitle: 'FIAT TORO',
         img: img1,
         bg: 'https://toro.fiat.com.br/static/media/storiesIndex.4d0958dc.jpg',
         text: 'Lorem',
