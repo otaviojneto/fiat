@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   Hero,
   Navigation,
@@ -11,10 +11,14 @@ const Home = () => {
   return (
     <Container>
       <Navigation />
-      {/* <Hero /> */}
-      <PaginationSwiper />
+
+      <main>
+        <PaginationSwiper />
+      </main>;
     </Container>
   );
 };
+
+/* <Hero />   swiper duplo */
 
 export default Home;

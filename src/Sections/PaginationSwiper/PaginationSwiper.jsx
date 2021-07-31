@@ -31,11 +31,10 @@ const PaginationSwiper = () => {
           },
         }}
         className="mySwiper"
-        navigation
       >
         {thumbs.map(item => (
           <SwiperSlide>
-            <Image src={item.brand} alt="" />
+            {item.brand && <Image src={item.brand} alt="" />}
             <Text>
               <h2>{item.title}</h2>
               <h1>{item.subtitle}</h1>

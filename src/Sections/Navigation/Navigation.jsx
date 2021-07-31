@@ -1,18 +1,17 @@
 import React, { useState } from 'react';
 import { Container, Hamburguer, Menu, Nav } from './styles';
 
-const Navigation = () => {
+const Navigation = ({ OpenNav }) => {
   const [open, setIsOpen] = useState(false);
   return (
     <Container>
-      <Menu>
       
-        <Nav open={open}  />
-      
-        <Hamburguer onClick={() => setIsOpen(!open) } open={open}>
+        <Nav open={open}  OpenNav={OpenNav} />
+
+        <Hamburguer onClick={() => setIsOpen(!open)} open={open}>
           <span></span>
         </Hamburguer>
-      </Menu>
+     
     </Container>
   );
 };

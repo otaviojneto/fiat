@@ -10,9 +10,9 @@ export const Container = styled.div`
 `;
 
 export const Swiper = styled(SwiperReact)`
-  width: 100%;
 
   .swiper-slide {
+    width: 100%;
     img {
       width: 100%;
     }

@@ -2,17 +2,17 @@ import styled from 'styled-components';
 import theme from '../../styles/theme';
 
 export const Container = styled.div`
+display: flex;
+position: relative;
+width:  ${props => (props.open ? '32%' : '100%')};;
 `;
 
-export const Menu = styled.div`
-  display: flex;
-`;
 
 export const Nav = styled.div`
   background-color: black;
   height: 100vh;
   transition: ease-in-out 0.4s;
-  width: ${props => (props.open ? '220px' : 0)}; ;
+  width: ${props => (props.open ? '220px' : 0)}; 
 `;
 
 export const Hamburguer = styled.button`
@@ -23,7 +23,7 @@ export const Hamburguer = styled.button`
   top: 10px;
   position: relative;
   width: 44px;
-  z-index: 2;
+  z-index: 20;
 
   span {
     content: '';
